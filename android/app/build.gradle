@@ -108,12 +108,17 @@ android {
 }
 
 dependencies {
-    // The version of react-native is set by the React Native Gradle Plugin
-    implementation("com.facebook.react:react-android")
+    implementation("com.facebook.react:react-native:+")
+    implementation("rg.webkit:android-jsc:+")
 
-    if (hermesEnabled.toBoolean()) {
-        implementation("com.facebook.react:hermes-android")
-    } else {
-        implementation jscFlavor
-    }
+    // The version of react-native is set by the React Native Gradle Plugin
+//    implementation("com.facebook.react:react-android")
+//
+//    if (hermesEnabled.toBoolean()) {
+//        implementation("com.facebook.react:hermes-android")
+//    } else {
+//        implementation jscFlavor
+//    }
 }
+
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
