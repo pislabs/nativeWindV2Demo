@@ -1,4 +1,4 @@
-package com.awesomeproject
+package com.nativewindv2demo
 
 import android.app.Application
 import com.facebook.react.PackageList
